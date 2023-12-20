@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Roboto:wght@300&display=swap');
+* {
+  font-family: 'Comfortaa', sans-serif;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+#product-list div {
+  width: 100px;
+}
+
+.ref {
+  font-weight: bold;
+}
+
+.designation {
+  font-family: 'Roboto', sans-serif;
+}
+
+.prix {
+  font-family: 'Roboto', sans-serif;
+}

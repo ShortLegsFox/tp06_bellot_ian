@@ -1,0 +1,22 @@
+<!-- Ajoutez ces classes Bootstrap à votre code HTML -->
+<p>Catalogue de produits</p>
+<br />
+<label for="search" class="font-weight-bold">Rechercher un produit :</label>
+<input [(ngModel)]="search" name="search" id="search" class="form-control" />
+
+<br />
+<br />
+
+<hr />
+<br />
+
+<div id="container" *ngIf="products$ | async as products">
+  <div id="catalogue" *ngFor="let p of products | filter: search">
+    <div class="ref">{{ p.ref }}</div>
+    <div class="designation">{{ p.designation }}</div>
+    <div class="prix">{{ p.prix }} €</div>
+    <button (click)="addToCart(p)">Ajouter au panier</button>
+  </div>
+</div>
+
+

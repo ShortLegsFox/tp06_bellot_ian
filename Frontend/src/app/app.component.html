@@ -1,0 +1,22 @@
+<app-header></app-header>
+<app-navbar></app-navbar>
+
+<label for="product-search">Search for products :</label>
+<input
+  #input
+  id="product-search"
+  type="text"
+  class="form-control"
+  placeholder="Product Name"
+/>
+
+<ul class="list-unstyled" *ngIf="model | async as response">
+  <li class="media" *ngFor="let product of response">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">{{ product.designation }} - {{ product.prix }}</h5>
+    </div>
+  </li>
+</ul>
+
+<router-outlet></router-outlet>
+<app-footer></app-footer>

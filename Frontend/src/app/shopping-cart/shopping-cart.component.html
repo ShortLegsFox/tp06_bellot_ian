@@ -1,0 +1,7 @@
+<p>shopping-cart works!</p>
+
+<div *ngFor="let p of liste$ | async">
+  {{ p.ref }} <button (click)="delProduct(p)">Supprimer du panier</button>
+</div>
+
+<button (click)="clearCart()">Vider le panier</button>
